@@ -30,15 +30,15 @@ http_proxy=http://100.88.77.66:9999 bash ./tp-install.sh
 ```
 2. start http forwarder and https tunnel tool to listen :10080 and :10081 port.
 ```
-./tp-init.sh
+bash ./tp-init.sh
 ```
 3. set iptables to redirect outward packages back to :10080 and :10081
 ```
-./tp-enable.sh
+bash ./tp-enable.sh
 ```
 
 *to remove iptable changes, you can run 
 ```
-./tp-disable.sh
+bash ./tp-disable.sh
 ```
 
