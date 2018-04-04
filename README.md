@@ -13,12 +13,12 @@ I managed to integrate iptables and some http tunnel tool to make any program be
 
 ## Note
 
-Please please replace these words with yours:
+Please please replace these words in each file and command line with yours:
 
 |words | meaning
 ---- | ---
 |eth0 |the real network interface for outgoing.
-|100.99.0.0/16 |the IP ranges where you do not want be affected by this tool
+|100.99.88.0/24 |the IP ranges where you do not want be affected by this tool
 |100.88.77.66 | real proxy server
 |9999 | real proxy server port
 
@@ -28,7 +28,17 @@ Please please replace these words with yours:
 ```
 http_proxy=http://100.88.77.66:9999 bash ./tp-install.sh
 ```
-2. run `./tp-init.sh` to start http forwarder and https tunnel tool to listen :10080 and :10081 port.
-3. run `./tp-enable.sh` to set iptables to redirect outward packages back to :10080 and :10081
-4. run `./tp-disable.sh` to remove iptabels changes.
+2. start http forwarder and https tunnel tool to listen :10080 and :10081 port.
+```
+./tp-init.sh
+```
+3. set iptables to redirect outward packages back to :10080 and :10081
+```
+./tp-enable.sh
+```
+
+*to remove iptable changes, you can run 
+```
+./tp-disable.sh
+```
 
