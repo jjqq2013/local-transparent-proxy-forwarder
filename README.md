@@ -24,22 +24,22 @@ Please please replace these words in each file and command line with yours:
 
 ## Usage
 
-1. download http forwarder and https tunnel tool.
+1. prepare your proxy env and download http forwarder and https tunnel tool.
 ```
-http_proxy=http://100.88.77.66:9999 bash ./tp-install.sh
+./tp-install.sh
 ```
 2. start http forwarder and https tunnel tool to listen :10080 and :10081 port.
 ```
-bash ./tp-init.sh
+./tp-init.sh
 ```
 3. set iptables to redirect outward packages back to :10080 and :10081
 ```
-bash ./tp-enable.sh
+./tp-enable.sh
 ```
 
 *to remove iptable changes, you can run 
 ```
-bash ./tp-disable.sh
+./tp-disable.sh
 ```
 
 
