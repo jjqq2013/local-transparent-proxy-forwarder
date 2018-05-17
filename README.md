@@ -22,25 +22,36 @@ Please please replace these words in each file and command line with yours:
 |100.88.77.66 | real proxy server
 |9999 | real proxy server port
 
-## Usage
+## Install
 
-1. prepare your proxy env and download http forwarder and https tunnel tool.
+1. prepare your proxy env and ensure that you can run `sudo`
+```
+http_proxy=http://100.88.77.66:9999
+https_proxy=http://100.88.77.66:9999
+```
+1. download relative tools
 ```
 ./tp-install.sh
 ```
-2. start http forwarder and https tunnel tool to listen :10080 and :10081 port.
+
+## Init
+
+start http forwarder and https tunnel tool to listen :10080 and :10081 port. 
 ```
-./tp-init.sh
-```
-3. set iptables to redirect outward packages back to :10080 and :10081
-```
-./tp-enable.sh
+./tp-init.sh 100.88.77.66 9999
 ```
 
-*to remove iptable changes, you can run 
+This just need be done once unless you restart your machine.
+
+## Enable
+
+set iptables to redirect outward packages back to :10080 and :10081
+```
+./tp-enable.sh 100.88.77.66 100.99.88.0/24 eth0
+```
+
+## Disable
+
 ```
 ./tp-disable.sh
 ```
-
-
-EDITING...
