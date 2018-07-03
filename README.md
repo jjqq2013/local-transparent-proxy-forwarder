@@ -1,7 +1,7 @@
 # local-transparent-proxy-forwarder
 Without configure various proxy settings, just let any process be able to access external web site which actually actually via a real proxy server
 
-In a private environment with HTTP/HTTPS proxy server, you might have been sick of that a lot of program does not respect respect global proxy settings(such as http_proxy/https_proxy environment variable).
+In a private environment with HTTP/HTTPS proxy server, you might have been sick of that a lot of program does not respect global proxy settings(such as http_proxy/https_proxy environment variable).
 
 I managed to integrate iptables and some http tunnel tool to make any program be able to access external web site as if they are already directly connected to internet.
 
